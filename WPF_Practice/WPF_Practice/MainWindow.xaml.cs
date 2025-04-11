@@ -24,22 +24,22 @@ namespace WPF_Practice
         {
             InitializeComponent();
 
-            Grid miGrid = new Grid();
-
-            this.Content = miGrid;
-
-            Button miBoton = new Button();
-
-            WrapPanel miWrap = new WrapPanel();
-            TextBlock txt1 = new TextBlock();
-            txt1.Text = "Click";
-            miWrap.Children.Add(txt1);
-
-            miBoton.Content = miWrap;
-
-            miGrid.Children.Add(miBoton);
+        
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("LE HAS DADO AL BOTON 2");
+        }
 
+        //private void Panel_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Console.WriteLine("LE HAS DADO AL PANEL");
+        //}
+
+        private void Panel_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Console.WriteLine("LE HAS DADO AL PANEL");
+        }
     }
 }
