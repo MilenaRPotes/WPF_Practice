@@ -23,6 +23,23 @@ namespace WPF_Practice
         public MainWindow()
         {
             InitializeComponent();
+
+            Grid miGrid = new Grid();
+
+            this.Content = miGrid;
+
+            Button miBoton = new Button();
+
+            WrapPanel miWrap = new WrapPanel();
+            TextBlock txt1 = new TextBlock();
+            txt1.Text = "Click";
+            miWrap.Children.Add(txt1);
+
+            miBoton.Content = miWrap;
+
+            miGrid.Children.Add(miBoton);
         }
+
+
     }
 }
